@@ -1,4 +1,4 @@
-class ParseFile
+class FileParser
   def self.parse(regex)
     result = []
     file = File.read('log.txt').encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')

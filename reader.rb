@@ -1,26 +1,17 @@
-require_relative 'parse_file'
+require_relative 'file_parser'
+require_relative 'counter'
 
 URL_REGEX = /request_to=\"(\S*)\"/
 STATUS_REGEX = /response_status=\"(\d*)\"/
 
-urls = ParseFile.parse(URL_REGEX)
+urls = FileParser.parse(URL_REGEX)
 
-unique_url = urls.uniq
-
-url_count = {}
-unique_url.each do |url|
-  url_count[url] = urls.count(url)
-end
+url_count = Counter.count(urls)
 
 puts url_count.max_by(3) { |x| x[1] }
 
-statuses = ParseFile.parse(STATUS_REGEX)
+statuses = FileParser.parse(STATUS_REGEX)
 
-unique_status = statuses.uniq
-
-status_count = {}
-unique_status.each do |status|
-  status_count[status] = statuses.count(status)
-end
+status_count = Counter.count(statuses)
 
 puts status_count.sort
