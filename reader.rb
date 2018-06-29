@@ -18,7 +18,9 @@ statuses = ParseFile.parse(STATUS_REGEX)
 
 unique_status = statuses.uniq
 
+status_count = {}
 unique_status.each do |status|
-  puts "#{status} - #{statuses.count(status)}"
+  status_count[status] = statuses.count(status)
 end
 
+puts status_count.sort
