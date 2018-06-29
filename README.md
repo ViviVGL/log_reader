@@ -1,1 +1,26 @@
-# log_reader
+# Log Reader
+
+### Pré-requisito
+
+- ruby versão 2.5.1
+
+### Setup do projeto
+
+```
+gem install bundler
+bundle install
+```
+
+### Rodando os testes
+
+```
+rspec
+```
+
+### Executando
+
+```
+ruby reader.rb
+```
+
+
