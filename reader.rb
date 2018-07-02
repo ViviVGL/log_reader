@@ -2,7 +2,7 @@ require_relative './lib/file_parser'
 require_relative './lib/counter'
 require_relative './lib/printer'
 
-filename = ARGV.each { |f| f }[0]
+filename = ARGV.first
 
 URL_REGEX = /request_to=\"(\S*)\"/
 STATUS_REGEX = /response_status=\"(\d*)\"/
