@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'printer'
 
 RSpec.describe Printer do

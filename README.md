@@ -20,7 +20,7 @@ rspec
 ### Executando
 
 ```
-ruby reader.rb
+ruby reader.rb ./caminho/do/arquivo.txt
 ```
 
 

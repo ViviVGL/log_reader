@@ -1,4 +1,3 @@
-require 'spec_helper'
 require 'counter'
 
 RSpec.describe Counter do

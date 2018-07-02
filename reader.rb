@@ -2,11 +2,13 @@ require_relative './lib/file_parser'
 require_relative './lib/counter'
 require_relative './lib/printer'
 
+filename = ARGV.each { |f| f }[0]
+
 URL_REGEX = /request_to=\"(\S*)\"/
 STATUS_REGEX = /response_status=\"(\d*)\"/
 
-urls = FileParser.parse(URL_REGEX)
-statuses = FileParser.parse(STATUS_REGEX)
+urls = FileParser.parse(URL_REGEX, filename)
+statuses = FileParser.parse(STATUS_REGEX, filename)
 
 url_count = Counter.count(urls)
 status_count = Counter.count(statuses)
