@@ -23,4 +23,8 @@ rspec
 ruby reader.rb ./caminho/do/arquivo.txt
 ```
 
+#### Comando do teste
 
+```
+ruby reader.rb ./log/log.txt
+```
