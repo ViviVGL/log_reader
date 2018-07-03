@@ -1,5 +1,9 @@
 # Log Reader
 
+Leitor de log para contagem de URLs e status de resposta.
+
+------
+
 ### Pré-requisito
 
 - ruby versão 2.5.1
@@ -23,8 +27,10 @@ rspec
 ruby reader.rb ./caminho/do/arquivo.txt
 ```
 
-#### Comando do teste
+------
+
+##### Comando do teste
 
 ```
 ruby reader.rb ./log/log.txt
-```
+``````
